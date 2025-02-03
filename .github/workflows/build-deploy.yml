@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'adoptopenjdk'  # Added distribution for Ubuntu-based runners
 
       - name: Build with Gradle
         run: ./gradlew build
@@ -33,4 +34,3 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           echo "Deploying build to AWS CodeDeploy..."
-          # Add actual deployment commands here, like AWS CLI commands
