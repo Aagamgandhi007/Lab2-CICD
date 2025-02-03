@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'adoptopenjdk'  # Added distribution for Ubuntu-based runners
+          distribution: 'temurin'  # Corrected distribution to 'temurin'
 
       - name: Build with Gradle
         run: ./gradlew build
